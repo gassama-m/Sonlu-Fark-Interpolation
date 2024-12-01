@@ -45,7 +45,7 @@ double delta(double *y, double *x, int i, int derece)
 
 double Ileri_Interp(double a, double *x, double *y, int *n)
 {
-    int derece = *n - 1; // polinomun derecesi, nokta sayisina -1 'e esit
+    int derece = *n - 1; 
     double carpim, P = y[0];
     for (int i = 1; i <= *n; i++)
     {
@@ -68,7 +68,7 @@ double nabla(double *y, double *x, int i, int derece)
 
 double Geri_Interp(double a, double *x, double *y, int *n)
 {
-    int derece = *n - 1; // polinomun derecesi, nokta sayisina -1 'e esit
+    int derece = *n - 1; 
     double carpim, P = y[*n - 1];
     for (int i = 1; i <= *n; i++)
     {
@@ -87,12 +87,12 @@ void menu(void)
     double *x;
     double *y;
     double a;
-    int n, Islem_turu, i; // Yanlis islem_turu girildiginde i while donguyu tekrarliyor
+    int n, Islem_turu, i;
     Inputpar(&x, &y, &a, &n);
     printf("\n\nEnter:\n1. For Merkez Sonlu Fark Interpolation\n2. For Ileri Sonlu Fark Interpolation\n3. For Geri Sonlu Fark Interpolation\n=>");
     do
     {
-        i = 0; // default case'e girmezsek donguyu tek bir defa calisir
+        i = 0;
         scanf("%d", &Islem_turu);
         switch (Islem_turu)
         {
